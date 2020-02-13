@@ -27,20 +27,20 @@
 - Volume: 8GiB, gp2 (Default)
 - Security Group: SSH(22), HTTP(80) {0.0.0.0/0}
 
-![ec2](/Users/ray/Documents/Test/cicd/sample-app/images/ec2.png)
+![ec2](./images/ec2.png)
 
 ### Create IAM role and Attach EC2
 
 - Name: codedeploy-ec2-role
 - Create EC2 Role
 
-![ec2-role](/Users/ray/Documents/Test/cicd/sample-app/images/ec2-role.png)
+![ec2-role](./images/ec2-role.png)
 
 - Attach IAM
 
-![attach-iam](/Users/ray/Documents/Test/cicd/sample-app/images/attach-iam.png)
+![attach-iam](./images/attach-iam.png)
 
-![ec2-iam-role](/Users/ray/Documents/Test/cicd/sample-app/images/ec2-iam-role.png)
+![ec2-iam-role](./images/ec2-iam-role.png)
 
 
 
@@ -50,7 +50,7 @@
 
 #### Create Repository
 
-![commit-repo](/Users/ray/Documents/Test/cicd/sample-app/images/CodeCommit-1.png)
+![commit-repo](./images/CodeCommit-1.png)
 
 
 
@@ -61,13 +61,13 @@
 - Name: codedeploy-ec2-role
 - Create CodeDeploy Role
 
-![deploy-role](/Users/ray/Documents/Test/cicd/sample-app/images/deploy-role.png)
+![deploy-role](./images/deploy-role.png)
 
 
 
 #### Create application
 
-![deploy-1](/Users/ray/Documents/Test/cicd/sample-app/images/deploy-1.png)
+![deploy-1](./images/deploy-1.png)
 
 ##### 참고
 
@@ -77,7 +77,7 @@
 
 #### Create deployment group
 
-![deploymentgroup](/Users/ray/Documents/Test/cicd/sample-app/images/deploymentgroup.png)
+![deploymentgroup](./images/deploymentgroup.png)
 
 ##### 참고
 
@@ -86,7 +86,7 @@
 
 #### Environment Configuration
 
-![deploy-conf](/Users/ray/Documents/Test/cicd/sample-app/images/deploy-conf.png)
+![deploy-conf](./images/deploy-conf.png)
 
 ##### 참고
 
@@ -96,7 +96,7 @@
 
 #### (option-blue/green) Deployment settings
 
-##### ![bg-set](/Users/ray/Documents/Test/cicd/sample-app/images/bg-set.png)
+##### ![bg-set](./images/bg-set.png)
 
 
 
@@ -118,7 +118,7 @@
 
 #### pipeline setting
 
-![pipeline-set](/Users/ray/Documents/Test/cicd/sample-app/images/pipeline-set.png)
+![pipeline-set](./images/pipeline-set.png)
 
 ##### 참조
 
@@ -130,7 +130,7 @@
 
 #### source stage
 
-![source stage](/Users/ray/Documents/Test/cicd/sample-app/images/source stage.png)
+![source stage](./images/source stage.png)
 
 ##### 참조
 
@@ -140,7 +140,7 @@
 
 #### create build stage
 
-![build-stage](/Users/ray/Documents/Test/cicd/sample-app/images/build-stage.png)
+![build-stage](./images/build-stage.png)
 
 
 
@@ -148,7 +148,7 @@
 
 ##### project configuration
 
-![build-conf](/Users/ray/Documents/Test/cicd/sample-app/images/build-conf.png)
+![build-conf](./images/build-conf.png)
 
 ##### 참조
 
@@ -156,7 +156,7 @@
 
 ##### build environment
 
-![build-env](/Users/ray/Documents/Test/cicd/sample-app/images/build-env.png)
+![build-env](./images/build-env.png)
 
 ##### 참조
 
@@ -170,7 +170,7 @@
 
   
 
-![build-env](/Users/ray/Documents/Test/cicd/sample-app/images/build-env2.png)
+![build-env](./images/build-env2.png)
 
 ##### 참조
 
@@ -184,16 +184,20 @@
   - File systems : File systems Mount
 - Logs는 모두 비활성화
 
-![build-ok](/Users/ray/Documents/Test/cicd/sample-app/images/build-ok.png)
+![build-ok](./images/build-ok.png)
 
 - build stage가 필요 없는 경우 Skip 가능
 
 #### Deploy Stage
 
-![Deploy-stage](/Users/ray/Documents/Test/cicd/sample-app/images/Deploy-stage.png)
+![Deploy-stage](./images/Deploy-stage.png)
 
 
 
 ## 생성 완료
 
-![finish](/Users/ray/Documents/Test/cicd/sample-app/images/finish.png)
+![finish](./images/finish.png)
+
+##### 참조
+
+- 현재 repo에 코드가 없어서 파이프라인이 동작하지 않음
