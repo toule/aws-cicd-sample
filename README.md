@@ -62,7 +62,11 @@ sudo ./install auto
 
 ![ec2-iam-role](./images/ec2-iam-role.png)
 
+##### 참조
 
+- EC2가 모두 올라간 이후에 접속해서 codedeploy agent가 설치가 되었는지 확인해 보고 설치가 안됬다면 위의 스크립트를 확인하여 설치해야함
+
+![codedeploy-cofirm](./images/codedeploy-cofirm.png)
 
 ## Create Pipeline
 
