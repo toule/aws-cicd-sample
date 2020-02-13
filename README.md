@@ -27,12 +27,25 @@
 
 #### Option
 
-- AMI: ami-0e4a253fb5f082688 (Amazon Linux 2)
+- AMI: ami-0bea7fd38fabe821a (Amazon Linux 2)
 - Type: t2.micro
 - VPC: Default VPC
 - Subnet: Public Subnet A
 - Volume: 8GiB, gp2 (Default)
 - Security Group: SSH(22), HTTP(80) {0.0.0.0/0}
+- keypair 생성
+- Codedeploy Agent 설치 필요
+
+```bash
+#user-data로 사용하거나 놓쳤다면 직접 접속해서 설치
+sudo yum update -y
+sudo yum install -y ruby
+sudo yum install -y wget
+cd /home/ec2-user
+wget https://aws-codedeploy-ap-northeast-2.s3.ap-northeast-2.amazonaws.com/latest/install
+chmod +x ./install
+sudo ./install auto
+```
 
 ![ec2](./images/ec2.png)
 
