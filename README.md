@@ -9,8 +9,15 @@
 ## 가정사항
 
 - AWS에 대한 기초적인 지식을 가지고 있음
+- CI/CD에 대해 기본적인 지식을 가지고 있음
 - 리전: Seoul (ap-northeast-2)
 - Console 환경: 20/02/13
+
+
+
+## 시나리오
+
+- Codecommit(repo), Codebuild(build), Codedeploy(deploy)를 구축하고 Codepipeline으로 automation 구현 
 
 
 
