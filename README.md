@@ -52,7 +52,7 @@ sudo ./install auto
 ### Create IAM role and Attach EC2
 
 - Name: codedeploy-ec2-role
-- Create EC2 Role
+- Create IAM EC2 Service Role
 
 ![ec2-role](./images/ec2-role.png)
 
@@ -86,8 +86,8 @@ sudo service codedeploy-agent status
 
 #### Create IAM Role
 
-- Name: codedeploy-ec2-role
-- Create CodeDeploy Role
+- Name: codedeploy-role
+- Create IAM CodeDeploy Service Role
 
 ![deploy-role](./images/deploy-role.png)
 
@@ -229,3 +229,17 @@ sudo service codedeploy-agent status
 ##### 참조
 
 - 현재 repo에 코드가 없어서 파이프라인이 동작하지 않음
+- codedeploy의 로그는 /var/log/aws/codedeploy-agent/codedeploy-agent.log에서 확인 가능
+- 주의 사항
+
+```reStructuredText
+2020-02-14 00:01:11 ERROR [codedeploy-agent(22657)]: InstanceAgent::Plugins::CodeDeployPlugin::CommandPoller: Missing credentials - please check if this instance was star ted with an IAM instance profile
+```
+
+다음과 같은 오류가 나오는 경우에는 EC2에 IAM을 제대로 attach했는지 확인해보거나 에이전트를 재동작하는 작업이 필요함
+
+```bash
+sudo systemctl restart codedeploy-agent
+sudo systemctl status codedeploy-agent
+```
+
