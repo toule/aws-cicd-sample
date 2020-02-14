@@ -19,6 +19,8 @@
 
 - Codecommit(repo), Codebuild(build), Codedeploy(deploy)를 구축하고 Codepipeline으로 automation 구현 
 
+![arch](./images/arch.png)
+
 
 
 ## 준비 사항
