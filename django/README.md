@@ -11,7 +11,8 @@
 - python에 대한 기본적인 지식을 알고 있음
 - django framework에 대한 기본적인 지식을 알고 있음
 - current version : django == 1.11.28
-- IAM User를 소유하고 있어서 콘솔에 접근 가능한 상태
+- IAM User를 소유하고 있고 자격증명을 완료한 상황(aws configure)
+- IAM 자격증명이 안되는 경우 codecommit에 대한 credential은 있어야함
 
 
 

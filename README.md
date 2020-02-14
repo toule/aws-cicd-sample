@@ -37,6 +37,7 @@
 #### Option
 
 - AMI: ami-0bea7fd38fabe821a (Amazon Linux 2)
+- Name: gsn-ec2 (추후에 codedeploy에서 EC2 name tag를 위해 반드시 필요)
 - Type: t2.micro
 - VPC: Default VPC
 - Subnet: Public Subnet A
@@ -129,7 +130,7 @@ sudo service codedeploy-agent status
 
 ##### 참고
 
-- EC2 tag방식이 제일 빠르며 필터를 진행한 이후 몇개의 인스턴스가 매치되었는지 확인해야함
+- EC2 tag방식이 제일 빠르며 필터를 진행한 이후 몇개의 인스턴스가 매치되었는지 확인해야함 (매치가 안되면 배포 불가)
 
 
 
