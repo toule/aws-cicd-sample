@@ -23,6 +23,15 @@
 
 ## 준비 사항
 
+
+
+### Create IAM role and Attach EC2
+
+- Name: codedeploy-ec2-role
+- Create IAM EC2 Service Role
+
+![ec2-role](./images/ec2-role.png)
+
 ### EC2 Installation
 
 #### Option
@@ -34,6 +43,11 @@
 - Volume: 8GiB, gp2 (Default)
 - Security Group: SSH(22), HTTP(80) {0.0.0.0/0}
 - keypair 생성
+
+- IAM role
+
+![iam](./images/ec2-iam-role-conf.png)
+
 - Codedeploy Agent 설치 필요
 
 ```bash
@@ -50,14 +64,10 @@ sudo ./install auto
 
 ![ec2](./images/ec2.png)
 
-### Create IAM role and Attach EC2
 
-- Name: codedeploy-ec2-role
-- Create IAM EC2 Service Role
 
-![ec2-role](./images/ec2-role.png)
-
-- Attach IAM
+- 만약에 최초 ec2를 구성할 때 iam 역할을 지정하지 못하는 경우에 아래와 같은 절차를 진행하면 됨
+- Attach IAM (이와 같이 attach하는 경우에는 ec2에 접속해서 agent를 재구동해야 함)
 
 ![attach-iam](./images/attach-iam.png)
 
@@ -65,7 +75,7 @@ sudo ./install auto
 
 ##### 참조
 
-- EC2가 모두 올라간 이후에 접속해서 codedeploy agent가 설치가 되었는지 확인해 보고 설치가 안됬다면 위의 스크립트를 확인하여 설치해야함
+- EC2가 모두 올라간 이후에 접속해서 codedeploy agent가 설치가 되었는지 확인해 보고 설치가 안됬다면 위의 agent install 스크립트를 확인하여 설치해야함
 
 ```bash
 sudo service codedeploy-agent status
