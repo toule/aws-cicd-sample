@@ -158,7 +158,7 @@ sudo service codedeploy-agent status
 
 #### source stage
 
-![source stage](./images/source stage.png)
+![source stage](./images/source-stage.png)
 
 ##### 참조
 
