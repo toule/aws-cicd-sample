@@ -4,8 +4,6 @@
 
 
 
-***Base Code**: aws code start sample code*
-
 ## 가정사항
 
 - AWS에 대한 기초적인 지식을 가지고 있음
