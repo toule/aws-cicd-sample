@@ -38,6 +38,7 @@
 
 ```bash
 #user-data로 사용하거나 놓쳤다면 직접 접속해서 설치
+#!/bin/sh
 sudo yum update -y
 sudo yum install -y ruby
 sudo yum install -y wget
